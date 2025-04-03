@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Verse Design</title>
+    <style>
+        body {
+            font-family: Serif;
+            text-align: center;
+            margin: 20px;
+        }
+        button {
+            width: 150px;
+            height: 40px;
+            font-size: 1em;
+            color: #FFEDFA;
+            background-color: #007F99;
+            border-color: #005F73;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #verse-container {
+            margin-top: 20px;
+        }
+        .styled {
+            background: linear-gradient(to right, #548CA8, #FFF2F2);
+            padding: 50px;
+            font-size: 3em;
+            font-family: 'Times New Roman', serif;
+            color: #272727;
+            width: 80%;
+            border: 2px solid #272727;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Buttons -->
+    <button onclick="addDesign()">Add Design</button>
+    <button onclick="removeDesign()">Remove Design</button>
+    
+    <div id="verse-container">
+        <p id="verse"><strong><em>Deuteronomy 31:6</em></strong></p>
+        <p id="quote" style="margin-top: 10px;">"Be strong and courageous; do not be afraid or terrified because of them, for the Lord your God goes with you; he will never leave you nor forsake you."</p>
+    </div>
+
+    <!-- Functions -->
+    <script>
+        function addDesign() {
+            var verseContainer = document.getElementById("verse-container");
+            verseContainer.classList.add("styled");
+        }
+
+        function removeDesign() {
+            var verseContainer = document.getElementById("verse-container");
+            verseContainer.classList.remove("styled");
+        }
+    </script>
+</body>
+</html>
